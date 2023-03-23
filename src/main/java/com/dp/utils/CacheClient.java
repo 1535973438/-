@@ -65,7 +65,6 @@ public class CacheClient {
         } finally {
             unLock(key);
         }
-
         return t;
     }
     public  <T,ID> T queryWithLogicalExpire( String cachePrefix, String lockPrefix, ID id, Class<T> type, Function<ID,T> dbFallback,Long time,TimeUnit unit) {
